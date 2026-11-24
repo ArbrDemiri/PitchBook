@@ -63,13 +63,12 @@ export default function Navbar() {
         {/* Desktop booking button */}
         <Link
           href="/fushat"
-          className="hidden items-center gap-2 rounded-xl bg-[#B7D894] px-5 py-3 text-sm font-bold text-[#202734] transition-all hover:bg-[#E0F8C7] md:inline-flex"
+          className="hidden items-center gap-2   bg-[#B7D894] px-5 py-3 text-sm font-bold text-[#202734] transition-all hover:bg-[#E0F8C7] md:inline-flex"
         >
           Rezervo një fushë
           <ArrowUpRight size={18} />
         </Link>
 
-        {/* Mobile menu button */}
         <button
           type="button"
           aria-label={isOpen ? "Mbyll menynë" : "Hap menynë"}
@@ -82,7 +81,7 @@ export default function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile navigation */}
+     
       {isOpen && (
         <div
           id="mobile-navigation"
