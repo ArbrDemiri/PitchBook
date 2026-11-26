@@ -18,6 +18,9 @@ export default function MobileNavbar() {
   const pathname = usePathname();
 
   return (
+    <div className="bg-gradient-to-r from-[#202734] via-[#293D40] to-[#295540]"> 
+
+ 
     <nav className="md:hidden">
 
       <div className="mx-auto flex h-16 items-center justify-between px-5">
@@ -96,5 +99,6 @@ export default function MobileNavbar() {
       )}
 
     </nav>
+       </div>
   );
 }

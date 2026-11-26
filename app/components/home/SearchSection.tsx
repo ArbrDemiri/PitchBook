@@ -1,4 +1,11 @@
-export default function SearchSection() {
+type SearchSectionProps = {
+  cities: string[];
+  fieldTypes: string[];
+};
+export default function SearchSection({
+  cities,
+  fieldTypes,
+}: SearchSectionProps) {
   return (
 
     <section className=" bg-gradient-to-r from-[#202734] via-[#293D40] to-[#295540]">
@@ -18,11 +25,11 @@ export default function SearchSection() {
               name="city"
               className="w-full  bg-[#202734] p-3 text-sm text-white outline-none transition focus:ring-2 focus:ring-[#B7D894]"
             >
-              <option value="">All cities</option>
-              <option value="Shkup">Shkup</option>
-              <option value="Tetovë">Tetovë</option>
-              <option value="Gostivar">Gostivar</option>
-              <option value="Ohër">Ohër</option>
+              {cities.map((city) => (
+                <option key={city} value={city}>
+                  {city}
+                </option>
+              ))}
             </select>
           </div>
 
@@ -40,9 +47,11 @@ export default function SearchSection() {
               name="type"
               className="w-full bg-[#202734] p-3 text-sm text-white outline-none transition focus:ring-2 focus:ring-[#B7D894]"
             >
-              <option value="">All</option>
-              <option value="indoor">Indoor</option>
-              <option value="outdoor">Outdoor</option>
+              {fieldTypes.map((type) => (
+                <option key={type} value={type.toLowerCase()}>
+                  {type}
+                </option>
+              ))}
             </select>
           </div>
 
